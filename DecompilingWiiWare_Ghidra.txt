@@ -1,0 +1,28 @@
+Surprisingly, nobody has publically shared any kind of set up for loading WiiWare games into Ghidra so I'll leave this here if you wanna try decompiling/reverse engineering a WiiWare title.
+I'm not entirely sure how accurate this is as some bits of code have issues but that might just be decompiler issues.
+
+1. Extract the contents of the WAD
+There are a couple programs out there that can do this, most notably ShowMiiWads (https://wiibrew.org/wiki/ShowMiiWads), but I use decomp-toolkit (https://github.com/encounter/decomp-toolkit) since it has a lot more features and you'll need it later on anyway.
+Assuming you're using dtk, open command prompt and enter 'dtk vfs cp input.wad: output_dir' (rename decomp-toolkit.exe to dtk.exe for this to work properly).
+You should now have 9 different .app files ranging from 00000000.app to 00000008.app
+
+2. Extracting the executable from 000000001.app
+00000001.app is the executable, but unlike the other .app files which can be decompressed with ShowMiiWads or any other U8 extraction program, 00000001 is compressed with NLZSS and will need to be decompressed with a separate program (which dtk can do).
+Enter 'dtk nlzss decompress 00000001.app -o output.bin' in the command prompt (note that the output file format doesn't matter).
+
+3. Setting up Ghidra
+Download Ghidra 12.0 (), then download the GameCube loader (https://github.com/Cuyler36/Ghidra-GameCube-Loader/releases) and follow the installation instructions (https://github.com/Cuyler36/Ghidra-GameCube-Loader?tab=readme-ov-file#installation).
+Create a new project and import the decompressed executable, Ghidra should automatically use the GameCube loader.
+
+4. Finding the Revolution SDK build date
+As far as I know, WiiWare titles do not come with any function symbols in their code at all, this includes code for RVL SDK.
+[WIP]
+
+5. Find a game with a matching SDK build date
+[WIP]
+
+6. Creating a FunctionID database for the SDK
+[WIP]
+
+7. Loading the .fidb
+[WIP]
