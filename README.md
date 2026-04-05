@@ -13,4 +13,4 @@ This includes:
  - A complete RE of the engine
 
 # Contributing
-I am not accepting contributions and probably never will, sorry
+I am not accepting contributions for code itself, but notes, documentation or advice are greatly appreciated (discuss in issues), I'm an amateur and only really doing this because of how neglected this game and other Shin'en titles are
