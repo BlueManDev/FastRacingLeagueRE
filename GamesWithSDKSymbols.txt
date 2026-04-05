@@ -1,0 +1,6 @@
+List of SDK build dates for Wii games with debug symbols, you'll need at least one of these since WiiWare games don't come with any symbols.
+This will probably be updated over time
+
+007: Quantum of Solace (PAL): June 2007 Release
+Ben 10: Alien Force (PAL): December 2009 Release
+Ben 10: Omniverse (PAL): August 23rd 2010 Release
