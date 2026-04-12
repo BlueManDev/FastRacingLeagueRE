@@ -3,6 +3,11 @@
 #include "../GameEngine.h"
 
 
+CEntModel::CEntModel()
+{
+	baseClass = "CEntModel";
+}
+
 void CEntModel::Attach(int entityId, int param_2)
 {
 	field_0x1a0 = entityId;
