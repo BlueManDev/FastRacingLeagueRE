@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Resource.h"
+
 
 // VM namespace comes from some symbols in the PC port of The Touryst, not sure if it's in this but I added it anyway
 namespace VM
@@ -22,6 +24,9 @@ public:
 	void RegisterScriptBindings();
 
 	void Execute(const char* functionName);
+
+	// load script unc
+	int* LoadScript__Unk(const char* scriptPath, CResource* param_2, int param_3, int param_4);
 
 	// For some reason, RegisterScriptBindings registers these functions under CGameEngine.
 	void LoadScriptGuarded(const char* scriptPath, int param_2);
